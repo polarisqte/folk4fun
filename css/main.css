@@ -378,7 +378,7 @@
 }
 
 .section-header-3 {
-  color: white; /* Override if needed */
+  color: white;
   font-size: 2.2rem;
   font-weight: 700;
   text-align: center;
@@ -423,7 +423,7 @@
 
 .gallery-btn:hover {
   background-color: #e0e0e0;
-  color: #2f7355; /* Darker shade of theme */
+  color: #2f7355;
 }
 
 /* Footer Section */
