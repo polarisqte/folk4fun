@@ -1,0 +1,500 @@
+/* Piotr N | 2025 */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --main-theme: #4ea77d;
+}
+
+* {
+  font-family: "Outfit";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section: Background Image Styling */
+#main-hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../img/Folk4Fun_Wide.JPG"),
+    linear-gradient(rgba(39, 39, 39, 0.884), rgba(39, 39, 39, 0.884));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: -2;
+}
+
+#main-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 39, 39, 0.884);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Hero Section: Header Styling */
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  color: white;
+}
+
+#main-logo img {
+  height: 70px;
+  width: auto;
+}
+
+#main-logo:hover {
+  cursor: pointer;
+}
+
+#main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  font-variation-settings: "wght" 300;
+  transition: font-variation-settings 0.3s ease;
+
+  padding-bottom: 4px;
+}
+
+.nav-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-theme);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+  font-variation-settings: "wght" 500;
+  color: var(--main-theme);
+}
+
+.nav-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* Hero Section: Carousel Styling */
+#main-carousel {
+  background: white;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  overflow: hidden;
+
+  border-radius: 20px;
+}
+
+.carousel-slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Main Section: Tour Area */
+#tour-area {
+  width: 100%;
+  height: 350px;
+  padding: 0 2rem;
+}
+
+.section-header-1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--main-theme);
+
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.section-header-1::before,
+.section-header-1::after {
+  content: "";
+  flex-grow: 1;
+  height: 5px;
+  background-color: var(--main-theme);
+  margin: 0 1rem;
+}
+
+.section-columns {
+  display: flex;
+  padding-top: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  gap: 2rem;
+}
+
+.section-columns-left,
+.section-columns-right {
+  border: 3px solid var(--main-theme);
+  border-radius: 10px;
+  padding: 1.2rem;
+  color: var(--main-theme);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  flex: 1;
+
+  box-shadow: 2px 2px 16px var(--main-theme);
+}
+
+.tour-date {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--main-theme);
+  margin-bottom: 0.2rem;
+}
+
+.tour-city {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.tour-venue {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--main-theme);
+  margin-bottom: 0.5rem;
+}
+
+.tour-tickets-btn {
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--main-theme);
+  border-radius: 6px;
+  color: var(--main-theme);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.tour-tickets-btn:hover {
+  background-color: var(--main-theme);
+  color: white;
+}
+
+#tours-page-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  padding: 0.75rem 2rem;
+  background-color: var(--main-theme);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  width: fit-content;
+  min-width: 440px;
+  transition: background-color 0.3s ease;
+}
+
+#tours-page-btn:hover {
+  cursor: pointer;
+  background-color: #3b8d6a;
+}
+
+/* Main Section: News Area */
+#news-area {
+  background-color: var(--main-theme);
+  width: 100%;
+  height: 350px;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.news-article {
+  background-color: white;
+  color: var(--main-theme);
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.news-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.news-excerpt {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.news-readmore-btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  color: white;
+  background-color: var(--main-theme);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.news-readmore-btn:hover {
+  background-color: #3b8d6a;
+}
+
+/* Main Section: About */
+#about-area {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.section-header-2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--main-theme);
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1.2px;
+}
+
+.about-intro {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.about-intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.band-members {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.member:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.member-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member:nth-child(even) .member-info {
+  text-align: right;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.member-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .member {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .member-info {
+    margin-top: 1rem;
+  }
+}
+
+/* Main Section: Gallery */
+#gallery-area {
+  padding: 4rem 2rem;
+  background-color: var(--main-theme);
+  color: white;
+  text-align: center;
+}
+
+.section-header-3 {
+  color: white; /* Override if needed */
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1.2px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+.gallery-button-wrapper {
+  margin-top: 3rem;
+}
+
+.gallery-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: white;
+  color: var(--main-theme);
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gallery-btn:hover {
+  background-color: #e0e0e0;
+  color: #2f7355; /* Darker shade of theme */
+}
+
+/* Footer Section */
+#main-footer {
+  position: relative;
+  background-image: url("../img/Folk4Fun_Wide.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 2.5rem 2rem;
+  flex-shrink: 0;
+  box-shadow: 0px -2px 10px #333;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  color: white;
+}
+
+#main-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(39, 39, 39, 0.952);
+  z-index: 0;
+}
+
+#main-footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-left img {
+  height: 70px;
+  width: auto;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+}
+
+.footer-contact {
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+.footer-label {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.footer-name,
+.footer-email {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin: 0;
+}
